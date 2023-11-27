@@ -1,4 +1,5 @@
 #!/bin/bash
-echo "$PYCODE" > temp.py
-python3 "temp.py"
-rm temp.py
+touch ./tremp.py
+echo "$PYCODE" > ./tremp.py
+python3 "tremp.py"
+rm ./tremp.py
