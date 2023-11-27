@@ -1,5 +1,2 @@
 #!/bin/bash
-touch ./tremp.py
-echo "$PYCODE" > ./tremp.py
-python3 "tremp.py"
-rm ./tremp.py
+python3 -c "$PYFILE"
