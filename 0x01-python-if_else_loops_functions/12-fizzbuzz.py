@@ -8,4 +8,6 @@ def fizzbuzz():
         if x % 3 != 0 and x % 5 != 0:
             print(x, end='')
         if x != 100:
+            print(' ', end='')
+        elif x == 100:
             print('', end='')
