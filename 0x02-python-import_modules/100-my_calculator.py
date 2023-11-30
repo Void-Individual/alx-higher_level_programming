@@ -22,3 +22,4 @@ if __name__ == "__main__":
         print('{} * {} = {}'.format(a, b, mul(a, b)))
     else:
         print('Unknown operator. Available operators: +, -, * and /')
+        exit(1)

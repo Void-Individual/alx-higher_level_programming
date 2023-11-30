@@ -1,4 +1,6 @@
 #!/usr/bin/python3
 for x in range(26):
-    print('{}'.format(chr(65 + x)), end='')
-print("")
+    if x != 25:
+        print('{}'.format(chr(65 + x)), end='')
+    else:
+        print('{}'.format(chr(65 + x)))
