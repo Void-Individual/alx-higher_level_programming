@@ -3,9 +3,9 @@
 #include "lists.h"
 
 /**
- * is_palindrome - function to check singly linked list for palindrome
- * @head: pointer to the list head
- * Return: 0 if not palindrome, else 1
+* is_palindrome - function to check singly linked list for palindrome
+* @head: pointer to the list head
+* Return: 0 if not palindrome, else 1
 */
 
 int is_palindrome(listint_t **head)
@@ -31,10 +31,10 @@ int is_palindrome(listint_t **head)
 	}
 	while (y <= x)
 	{
-		if (value[y] != value[x])
-			return (0);
-		else
+		if (value[y] == value[x])
 			y++, x--;
+		else
+			return (0);
 	}
 
 	free(value);
