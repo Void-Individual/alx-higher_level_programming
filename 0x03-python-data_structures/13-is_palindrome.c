@@ -16,7 +16,7 @@ int is_palindrome(listint_t **head)
 
 	if (current == NULL)
 		return (1);
-	value = malloc(sizeof(int) * 10);
+	value = malloc(sizeof(int) * 100);
 	if (value == NULL)
 	{
 		free(value);
