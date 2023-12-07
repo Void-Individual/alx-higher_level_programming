@@ -9,4 +9,3 @@ def square_matrix_simple(matrix=[]):
             temp.append(y * y)
         new.append(temp)
     return new
-    
