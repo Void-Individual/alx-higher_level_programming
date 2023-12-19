@@ -16,12 +16,12 @@ class Square:
             raise TypeError("size must be an integer")
 
         if isinstance(position[0], int) and isinstance(position[1], int):
-            if position[1] >= 0 and position[1] >= 0:
+            if position[0] >= 0 and position[1] >= 0:
                 self.__position = position
             else:
-                TypeError("position must be a tuple of 2 positive integers")
+                raise TypeError("position must be a tuple of 2 positive integers")
         else:
-            TypeError("position must be a tuple of 2 positive integers")
+            raise TypeError("position must be a tuple of 2 positive integers")
 
     @property
     def size(self):
@@ -63,15 +63,8 @@ class Square:
         """Method to print the square with #"""
         count = 0
         while count < self.__size:
-            val = 0
-            pos = 0
-            while pos < self.__position[0]:
-                print(" ", end='')
-                pos += 1
-            while val < self.__size:
-                print("#", end='')
-                val += 1
-            print('\n', end='')
+            print(" " * self.__position[0], end='')
+            print("#" * self.__size)
             count += 1
         if self.__size == 0:
             print("")
