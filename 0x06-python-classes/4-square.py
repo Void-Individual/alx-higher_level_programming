@@ -1,6 +1,10 @@
 #!/usr/bin/python3
+"""This is a class module"""
+
+
 class Square:
     """CLass to define a square"""
+
     def __init__(self, size=0):
         """Instantiate private instance variables"""
         if isinstance(size, int):
