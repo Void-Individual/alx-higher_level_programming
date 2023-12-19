@@ -39,9 +39,5 @@ class Square:
         """Method to print the square with #"""
         count = 0
         while count < self.__size:
-            val = 0
-            while val < self.__size:
-                print("#", end='')
-                val += 1
-            print('\n', end='')
+            print("#" * self.__size)
             count += 1
