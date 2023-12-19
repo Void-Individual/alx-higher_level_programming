@@ -73,5 +73,5 @@ class Square:
                 val += 1
             print('\n', end='')
             count += 1
-        if count == 0:
+        if self.__size == 0:
             print("")
