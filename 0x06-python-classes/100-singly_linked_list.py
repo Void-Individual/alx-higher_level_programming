@@ -1,6 +1,7 @@
 #!/usr/bin/python3
 """This is a class module"""
 
+
 class Node:
     """Class to define a node in a list"""
     def __init__(self, data, next_node=None):
@@ -9,7 +10,7 @@ class Node:
             self.__data = data
         else:
             raise TypeError("data must be an integer")
-        if isinstance(next_node, Node) or next_node == None:
+        if isinstance(next_node, Node) or next_node is None:
             self.__next_node = next_node
         else:
             raise TypeError("next_node must be a Node object")
@@ -35,10 +36,11 @@ class Node:
     @next_node.setter
     def next_node(self, value):
         """"method to set new next node"""
-        if isinstance(value, Node) or value == None:
+        if isinstance(value, Node) or value is None:
             self.__next_node = value
         else:
             raise TypeError("next_node must be a Node object")
+
 
 class SinglyLinkedList:
     """class to define a singly linked list"""
@@ -58,7 +60,7 @@ class SinglyLinkedList:
             self.head = new_node
         else:
             current = self.head
-            while (current.next_node != None and
+            while (current.next_node is not None and
                    current.next_node.data < value):
                 current = current.next_node
             new_node.next_node = current.next_node
