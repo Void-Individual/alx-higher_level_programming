@@ -74,11 +74,12 @@ class Square:
     def my_print(self):
         """Method to print the square with #"""
         count = 0
-        if self.__position[1] > 0:
+        if self.__size == 0:
             print("")
+        else:
+            if self.__position[1] > 0:
+                print("")
         while count < self.__size:
             print(" " * self.__position[0], end='')
             print("#" * self.__size)
             count += 1
-        if self.__size == 0:
-            print("")
