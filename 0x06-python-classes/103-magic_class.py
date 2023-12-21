@@ -1,4 +1,5 @@
 #!/usr/bin/python3
+"""A magic calculation module"""
 
 
 class MagicClass:
