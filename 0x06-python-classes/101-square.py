@@ -90,7 +90,7 @@ class Square:
             sq_str += '\n'
         else:
             sec = 0
-            while sec < self.__position:
+            while sec < self.__position[1]:
                 sq_str += '\n'
                 sec += 1
             while count < self.__size:
