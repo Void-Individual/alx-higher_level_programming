@@ -1,6 +1,8 @@
 #!/usr/bin/python3
 """A magic calculation module"""
 
+import math
+
 
 class MagicClass:
     """A class to replicate bytecode"""
@@ -11,8 +13,8 @@ class MagicClass:
 
     def area(self):
         """Method to check for the area"""
-        return (self.__radius ** 2) * (22 / 7)
+        return (self.__radius ** 2) * math.pi
 
     def circumference(self):
         """Method to check for the perimeter"""
-        return (2 * (22 / 7)) * self.__radius
+        return (2 * math.pi) * self.__radius
