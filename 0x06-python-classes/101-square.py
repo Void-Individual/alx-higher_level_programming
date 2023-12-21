@@ -84,7 +84,7 @@ class Square:
 
     def __str__(self):
         """Method to print the square with # from print()"""
-        count = 0
+        count = 1
         sq_str = ""
         if self.__size == 0:
             sq_str += '\n'
@@ -93,8 +93,11 @@ class Square:
             while sec < self.__position[1]:
                 sq_str += '\n'
                 sec += 1
-            while count < self.__size:
+            while count <= self.__size:
                 sq_str += " " * self.__position[0]
-                sq_str += "#" * self.__size + '\n'
+                if count != self.__size:
+                    sq_str += "#" * self.__size + '\n'
+                else:
+                    sq_str += "#" * self.__size
                 count += 1
         return sq_str
