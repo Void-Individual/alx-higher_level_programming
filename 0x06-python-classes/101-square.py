@@ -87,7 +87,7 @@ class Square:
         count = 1
         sq_str = ""
         if self.__size == 0:
-            sq_str += '\n'
+            return sq_str
         else:
             sec = 0
             while sec < self.__position[1]:
