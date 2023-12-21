@@ -5,10 +5,9 @@
 class MagicClass:
     """A class to replicate bytecode"""
     def __init__(self, radius=0):
-        if type(radius) is not int:
-            if type(radius) is not float:
-                raise TypeError("radius must be a number")
-            self.__radius = radius
+        if type(radius) not in (int, float):
+            raise TypeError("radius must be a number")
+        self.__radius = radius
 
     def area(self):
         """Method to check for the area"""
