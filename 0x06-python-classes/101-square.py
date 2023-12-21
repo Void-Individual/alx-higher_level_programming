@@ -70,27 +70,31 @@ class Square:
     def my_print(self):
         """Method to print the square with #"""
         count = 0
-        if self.__position[1] > 0:
-            print("")
-        while count < self.__size:
-            print(" " * self.__position[0], end='')
-            print("#" * self.__size)
-            count += 1
         if self.__size == 0:
             print("")
+        else:
+            sec = 0
+            while sec < self.__position[1]:
+                print("")
+                sec += 1
+            while count < self.__size:
+                print(" " * self.__position[0], end='')
+                print("#" * self.__size)
+                count += 1
 
     def __str__(self):
         """Method to print the square with # from print()"""
         count = 0
         sq_str = ""
-        if self.__size is 0:
+        if self.__size == 0:
             sq_str += '\n'
         else:
-            if self.__position[1] > 0:
-                sq_str = '\n'
-        while count < self.__size:
-            sq_str += " " * self.__position[0]
-            sq_str += "#" * self.__size + '\n'
-            count += 1
-
+            sec = 0
+            while sec < self.__position:
+                sq_str += '\n'
+                sec += 1
+            while count < self.__size:
+                sq_str += " " * self.__position[0]
+                sq_str += "#" * self.__size + '\n'
+                count += 1
         return sq_str
