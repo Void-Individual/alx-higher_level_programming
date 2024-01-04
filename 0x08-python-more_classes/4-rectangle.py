@@ -78,6 +78,9 @@ class Rectangle:
 
         count_height = 1
         rect = ""
+        if self.__height == 0 or self.__width == 0:
+            return rect
+
         while count_height <= self.__height:
             if count_height != self.__height:
                 rect += "#" * self.__width + "\n"

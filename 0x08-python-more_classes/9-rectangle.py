@@ -82,6 +82,8 @@ class Rectangle:
 
         count_height = 1
         rect = ""
+        if self.__height == 0 or self.__width == 0:
+            return rect
         self.print_symbol = str(self.print_symbol)
 
         while count_height <= self.__height:
