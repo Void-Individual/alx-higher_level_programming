@@ -1,0 +1,44 @@
+The "2-matrix_divided" module
+=============================
+
+Using ''matrix_divided''
+-----------------------------
+
+Import the function from the module
+    >>> matrix_divided = __import__('2-matrix_divided').matrix_divided
+
+Testing an int matrix with div
+    >>> matrix_divided([[1, 2, 3], [4, 5, 6]], 3)
+    [[0.33, 0.67, 1.0], [1.33, 1.67, 2.0]]
+
+Testing a float matrix with a float div
+    >>> matrix_divided([[1.2, 2.9, 5.3], [4.99, 55.2, 1.6]], 3.3)
+    [[0.36, 0.88, 1.61], [1.51, 16.73, 0.48]]
+
+Testing with a string within the matrix
+    >>> matrix_divided([[1, 2, 3], [4, "x", 6]], 3)
+    Traceback (most recent call last):
+            . . .
+    TypeError: matrix must be a matrix (list of lists) of integers/floats
+
+Testing with div having a value of zero
+    >>> matrix_divided([[1, 2, 3], [4, 5, 6]], 0)
+    Traceback (most recent call last):
+            . . .
+    ZeroDivisionError: division by zero
+
+Testing with div having a value of zero
+    >>> matrix_divided([[1, 2, 3], [4, 5, 6]], 'x')
+    Traceback (most recent call last):
+            . . .
+    TypeError: div must be a number
+
+Testing with a matrix that has lists of uneven lenghts
+    >>> matrix_divided([[1, 2, 3], [4, 5, 6, 7]], 3)
+    Traceback (most recent call last):
+            . . .
+    TypeError: Each row of the matrix must have the same size
+
+Testing a matrix with positive and negative integers and floats
+    >>> matrix_divided([[-1, 3.1, 0], [78, -103.7, 54]], 9.2)
+    [[-0.11, 0.34, 0.0], [8.48, -11.27, 5.87]]

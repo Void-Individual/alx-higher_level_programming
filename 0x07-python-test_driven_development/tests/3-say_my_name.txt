@@ -1,0 +1,42 @@
+The ''3-say_my_name'' module
+=============================
+
+Using ''say_my_name''
+-----------------------------
+
+Import the function
+    >>> say_my_name = __import__('3-say_my_name').say_my_name
+
+Testing with regular names 1
+    >>> say_my_name("John", "Smith")
+    My name is John Smith
+
+Testing with regular names 2
+    >>> say_my_name("Walter", "White")
+    My name is Walter White
+
+Testing with regular names 3
+    >>> say_my_name("Bob")
+    My name is Bob 
+
+Testing with an integer
+    >>> say_my_name(12, "White")
+    Traceback (most recent call last):
+            . . .
+    TypeError: first_name must be a string
+
+Testing with a float
+    >>> say_my_name(1.2, "White")
+    Traceback (most recent call last):
+            . . .
+    TypeError: first_name must be a string
+
+Testing with a list
+    >>> say_my_name([], "White")
+    Traceback (most recent call last):
+            . . .
+    TypeError: first_name must be a string
+
+Testing with blank names
+    >>> say_my_name("", "")
+    My name is  
