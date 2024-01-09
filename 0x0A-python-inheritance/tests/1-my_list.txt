@@ -31,10 +31,25 @@ Test the sorted child method
     >>> my_list.print_sorted()
     [1, 2, 3, 4]
 
+Testing if a new list is returned
+    >>> print(my_list)
+    [1, 4, 2, 3]
+
+Test The basic functionof the subclass
+    >>> my_list.append(-5)
+
+Test the sorted child method
+    >>> my_list.print_sorted()
+    [-5, 1, 2, 3, 4]
+
 Testing the clear list function
     >>> my_list.clear()
 
 
-Testing output afyer clearing list
+Testing output after clearing list
     >>> print(my_list)
+    []
+
+Testing print_sorted with an empty list
+    >>> my_list.print_sorted()
     []
