@@ -15,4 +15,4 @@ class Square(Rectangle):
         return super().area()
 
     def __str__(self):
-        return f"[square] {self.__size}/{self.__size}"
+        return f"[Square] {self.__size}/{self.__size}"

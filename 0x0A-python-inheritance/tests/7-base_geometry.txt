@@ -48,7 +48,7 @@ Testing the method with blank value
     >>> bg.integer_validator("test")
     Traceback (most recent call last):
             . . .
-    TypeError: BaseGeometry.integer_validator() missing 1 required positional argument: 'value'
+    TypeError: integer_validator() missing 1 required positional argument: 'value'
 
 Testing Integer_validator with no arguments
     >>> bg = BaseGeometry()
