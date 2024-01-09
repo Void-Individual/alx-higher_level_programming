@@ -7,6 +7,6 @@ class MyList(list):
 
     def print_sorted(self):
         """Method to print the list in ascention"""
-
-        sorted_list = sorted(self)
+        copied = self.copy()
+        sorted_list = sorted(copied)
         print(sorted_list)
