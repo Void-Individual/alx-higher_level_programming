@@ -1,0 +1,41 @@
+The ''7-base_geometry'' module
+==============================
+
+Using ''BaseGeometry''
+------------------------------
+
+Import the class function
+    >>> BaseGeometry = __import__('7-base_geometry').BaseGeometry
+
+Creating an instance of the class
+    >>> bg = BaseGeometry()
+
+Testing the method using valid values
+    >>> bg.integer_validator("my_int", 12)
+
+Testing the method using valid values
+    >>> bg.integer_validator("width", 89)
+
+Testing the method passing (string, string)
+    >>> bg.integer_validator("name", "John")
+    Traceback (most recent call last):
+            . . .
+    TypeError: name must be an integer
+
+Testing the method passing (string, zero)
+    >>> bg.integer_validator("name", 0)
+    Traceback (most recent call last):
+            . . .
+    ValueError: name must be greater than 0
+
+Testing the method passing (string, negative)
+    >>> bg.integer_validator("distance", -4)
+    Traceback (most recent call last):
+            . . .
+    ValueError: distance must be greater than 0
+
+Testing the method with blank value
+    >>> bg.integer_validator("test")
+    Traceback (most recent call last):
+            . . .
+    TypeError: BaseGeometry.integer_validator() missing 1 required positional argument: 'value'

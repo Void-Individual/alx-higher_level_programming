@@ -1,0 +1,40 @@
+The ''1-my_list.txt'' module
+=============================
+
+Using ''MyList''
+-----------------------------
+
+Import the class
+    >>> MyList = __import__('1-my_list').MyList
+
+Create an instance with the new class
+    >>> my_list = MyList()
+
+
+Test The basic functionof the subclass
+    >>> my_list.append(1)
+
+
+Test The basic functionof the subclass
+    >>> my_list.append(4)
+
+
+Test The basic functionof the subclass
+    >>> my_list.append(2)
+
+
+Test The basic functionof the subclass
+    >>> my_list.append(3)
+
+
+Test the sorted child method
+    >>> my_list.print_sorted()
+    [1, 2, 3, 4]
+
+Testing the clear list function
+    >>> my_list.clear()
+
+
+Testing output afyer clearing list
+    >>> print(my_list)
+    []
