@@ -30,7 +30,7 @@ class Magic:
         """ print status code """
         print("File size: {:d}".format(self.size))
         for key in sorted(self.dic.keys()):
-            if self.dic[key] is not 0:
+            if self.dic[key] !=  0:
                 print("{}: {:d}".format(key, self.dic[key]))
 
 
