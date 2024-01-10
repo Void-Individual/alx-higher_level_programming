@@ -41,7 +41,7 @@ if __name__ == "__main__":
 
     try:
         for line in sys.stdin:
-            if nlines % 10 == 0 and nlines is not 0:
+            if nlines % 10 == 0 and nlines != 0:
                 magic.print_info()
 
             try:
