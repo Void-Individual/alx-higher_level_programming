@@ -2,6 +2,7 @@
 """Module to convert to json"""
 import json
 
+
 def to_json_string(my_obj):
     """Function to return json representation"""
 
