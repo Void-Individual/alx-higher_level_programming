@@ -12,7 +12,7 @@ def text_indentation(text):
     check = 0
     for chr in text:
         if ((chr == '.') or (chr == '?')
-            or (chr == ':')):
+                or (chr == ':')):
             print('\n')
             check += 1
         else:

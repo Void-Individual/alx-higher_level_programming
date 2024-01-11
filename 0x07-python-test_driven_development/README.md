@@ -12,3 +12,5 @@
 - tests/6-max_integer_test.py: In this task, you will write unittests for the function def max_integer(list=[]):.
 - 100-matrix_mul.py: Write a function that multiplies 2 matrices
 - tests/100-matrix_mul.txt: Test file
+- 101-lazy_matrix_mul.py: Write a function that multiplies 2 matrices by using the module NumPy
+- tests/101-lazy_matrix_mul.txt: Test cases
