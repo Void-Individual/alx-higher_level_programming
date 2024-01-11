@@ -7,3 +7,8 @@
 - tests/3-say_my_name.txt: Test file
 - 4-print_square.py: Write a function that prints a square with the character #.
 - tests/4-print_square.txt: Test file
+- 5-text_indentation.py: Write a function that prints a text with 2 new lines after each of these characters: ., ? and :
+- tests/5-text_indentation.txt: Test file
+- tests/6-max_integer_test.py: In this task, you will write unittests for the function def max_integer(list=[]):.
+- 100-matrix_mul.py: Write a function that multiplies 2 matrices
+- tests/100-matrix_mul.txt: Test file
