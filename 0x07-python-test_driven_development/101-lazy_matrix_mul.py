@@ -1,6 +1,6 @@
 #!/usr/bin/python3
 """module to easy matrix mul"""
-import numpy as np:
+import numpy as np
 
 
 def lazy_matrix_mul(m_a, m_b):
