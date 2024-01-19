@@ -31,13 +31,12 @@ class Base:
     def save_to_file(cls, list_objs):
         """Method to return json format of dict attributes into a file"""
 
-        if len(list_objs) != 0:
+        if list_objs is not None:
             objects = [obj.to_dictionary() for obj in list_objs]
             content = cls.to_json_string(objects)
-            name = f'{cls.__name__}.json'
         else:
             content = '[]'
-            name = 'Base.json'
+        name = f'{cls.__name__}.json'
 
         with open(name, 'w', encoding='utf-8') as file:
             file.write(content)
@@ -55,8 +54,7 @@ class Base:
     def create(cls, **dictionary):
         """Method to convert the json dict into actual instances"""
 
-        class_args = {'Rectangle': ('width', 'height', 'x', 'y'),
-                      'Square': ('size', 'x', 'y')}
+        class_args = {'Rectangle': ('width', 'height'), 'Square': ('size', )}
         if cls.__name__ not in class_args:
             raise ValueError(f"Unsupported class: {cls.__name__}")
 
