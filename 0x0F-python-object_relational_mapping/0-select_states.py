@@ -4,12 +4,15 @@
 import MySQLdb
 import sys
 
+
 def list_states(username, password, db_name):
     """Function to connect to mysql server"""
 
-    db = MySQLdb.connect(host='localhost',
+    db = MySQLdb.connect(
+        host='localhost',
         user=username, passwd=password,
-        db=db_name, port=3306)
+        db=db_name, port=3306
+    )
 
     """Create a cursor object"""
     cursor = db.cursor()
@@ -27,6 +30,7 @@ def list_states(username, password, db_name):
     """Close cursor and end connection"""
     cursor.close()
     db.close
+
 
 if __name__ == "__main__":
     if len(sys.argv) != 4:
