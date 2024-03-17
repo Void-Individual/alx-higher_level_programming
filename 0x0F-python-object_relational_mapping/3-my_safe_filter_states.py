@@ -5,7 +5,7 @@ import sys
 import MySQLdb
 
 
-def filter_states(username, password, db_name):
+def filter_states(username, password, db_name, s_name):
     """Function to connect to a sql server"""
 
     db = MySQLdb.connect(
@@ -15,7 +15,8 @@ def filter_states(username, password, db_name):
     )
 
     cursor = db.cursor()
-    cursor.execute("SELECT * FROM states WHERE name LIKE 'N%' ORDER BY id")
+    query = "SELECT * FROM states WHERE name = %s ORDER BY id"
+    cursor.execute(query, (s_name,))
 
     states = cursor.fetchall()
     for state in states:
@@ -26,8 +27,8 @@ def filter_states(username, password, db_name):
 
 
 if __name__ == "__main__":
-    if len(sys.argv) != 4:
+    if len(sys.argv) != 5:
         sys.exit(1)
 
-    username, password, db_name = sys.argv[1:]
-    filter_states(username, password, db_name)
+    username, password, db_name, s_name = sys.argv[1:]
+    filter_states(username, password, db_name, s_name)
