@@ -21,11 +21,10 @@ def filter_states(username, password, db_name):
     for state in states:
         print(state)
 
-    cursor.close()
-    db.close
-
 
 if __name__ == "__main__":
+    if len(sys.argv) != 4:
+        sys.exit(1)
 
     username, password, db_name = sys.argv[1:]
     filter_states(username, password, db_name)
