@@ -9,7 +9,6 @@ def filter_states(username, password, db_name):
     """Function to connect to a sql server"""
 
     db = MySQLdb.connect(
-        host='localhost',
         user=username, passwd=password,
         db=db_name, port=3306
     )
