@@ -1,5 +1,6 @@
 #!/usr/bin/python3
-"""Module for a script to print the first state object in db"""
+"""Module of a script to print the state object with the name
+passed as an argument from the db"""
 
 import sys
 from model_state import Base, State
@@ -15,11 +16,14 @@ if __name__ == "__main__":
     Session = sessionmaker(bind=engine)
     session = Session()
 
-    first_state = session.query(State).order_by(State.id).first()
+    name = sys.argv[4]
 
-    if first_state is None:
-        print('Nothing')
+    """Search for the first object with the state name"""
+    state = session.query(State).filter(State.name == name).first()
+
+    if state:
+        print(state.id)
     else:
-        print("{}: {}".format(first_state.id, first_state.name))
+        print('Not found')
 
     session.close()

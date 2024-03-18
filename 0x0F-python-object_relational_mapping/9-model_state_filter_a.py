@@ -1,5 +1,5 @@
 #!/usr/bin/python3
-"""Module for a script to print the first state object in db"""
+"""Module of a script to print states with a in the db"""
 
 import sys
 from model_state import Base, State
@@ -15,11 +15,10 @@ if __name__ == "__main__":
     Session = sessionmaker(bind=engine)
     session = Session()
 
-    first_state = session.query(State).order_by(State.id).first()
+    states = session.query(State).order_by(State.id).all()
 
-    if first_state is None:
-        print('Nothing')
-    else:
-        print("{}: {}".format(first_state.id, first_state.name))
+    for state in states:
+        if 'a' in state.name:
+            print(f"{state.id}: {state.name}")
 
     session.close()

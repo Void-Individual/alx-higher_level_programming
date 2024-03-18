@@ -1,5 +1,5 @@
 #!/usr/bin/python3
-"""Module for a script to print the first state object in db"""
+"""Module of a script to insert a new state to the db"""
 
 import sys
 from model_state import Base, State
@@ -15,11 +15,14 @@ if __name__ == "__main__":
     Session = sessionmaker(bind=engine)
     session = Session()
 
-    first_state = session.query(State).order_by(State.id).first()
+    """Define a new state object"""
+    new_state = State(name='Louisiana')
 
-    if first_state is None:
-        print('Nothing')
-    else:
-        print("{}: {}".format(first_state.id, first_state.name))
+    """Add the new object to the session"""
+    session.add(new_state)
+
+    """Commit the transaction"""
+    session.commit()
+    print(f"{new_state.id}")
 
     session.close()

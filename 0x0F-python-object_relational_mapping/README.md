@@ -10,4 +10,6 @@
 - model_state.py: Write a python file that contains the class definition of a State and an instance Base = declarative_base().
 - 7-model_state_fetch_all.py: Write a script that lists all State objects from the database hbtn_0e_6_usa.
 - 8-model_state_fetch_first.py: Write a script that prints the first State object from the database hbtn_0e_6_usa.
-- 
+- 9-model_state_filter_a.py: Write a script that lists all State objects that contain the letter a from the database hbtn_0e_6_usa.
+- 10-model_state_my_get.py: Write a script that adds the State object “Louisiana” to the database hbtn_0e_6_usa
+- 11-model_state_insert.py: 
