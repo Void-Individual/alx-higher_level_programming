@@ -2,6 +2,7 @@
 """Module of a script to change the name of a state object with id"""
 
 import sys
+from model_city import City
 from model_state import Base, State
 from sqlalchemy import create_engine
 from sqlalchemy.orm import sessionmaker

@@ -2,6 +2,7 @@
 """Module to list all the states in a db"""
 
 import sys
+from model_city import City
 from model_state import Base, State
 from sqlalchemy import create_engine
 from sqlalchemy.orm import sessionmaker
