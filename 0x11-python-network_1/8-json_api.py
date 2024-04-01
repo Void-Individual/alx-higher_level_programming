@@ -7,18 +7,18 @@ import requests
 from sys import argv
 
 if __name__ == "__main__":
-    if argv[1]:
-        letter = argv[1]
+    if len(argv) == 1:
+        q = ""
     else:
-        letter = ""
+        q = argv[1]
     url = "http://0.0.0.0:5000/search_user"
-    data = {'q': letter}
+    data = {'q': q}
 
     response = requests.post(url, data)
     try:
         result = response.json()
         if result:
-            print("[{}] {}".format(result['id'], result['name']))
+            print("[{}] {}".format(result.get('id'), result.get('name')))
         else:
             print("No result")
     except ValueError:
