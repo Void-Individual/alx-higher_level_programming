@@ -1,6 +1,7 @@
 #!/usr/bin/python3
 """Module containing a function for peaks"""
 
+
 def find_peak(list_of_integers):
     """Function to find and returrn the peak in a list of integers"""
 

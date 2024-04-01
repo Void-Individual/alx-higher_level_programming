@@ -1,1 +1,2 @@
-0(n2)
+Complexity of 6-peak.py
+O(n2)
